@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Parker Bradfield — FireStar</title>
-  <meta name="description" content="Parker Bradfield — developer, swimmer, ESPORTS captain, and FireStar." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F525;</text></svg>" />
+  <meta name="description" content="Parker Bradfield — developer, swimmer, ESPORTS captain, and FireStar."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F525;</text></svg>"/>
   <style>
-    :root {
-      --bg:#080604; --bg2:#110b05; --ember:#2e1200;
-      --orange:#e85d04; --amber:#f48c06; --gold:#ffd60a; --red:#c1440e;
-      --cream:#fff8e7; --ash:#7a6a5a; --smoke:#2a1f18;
-      --glow-o:0 0 18px rgba(232,93,4,.65),0 0 50px rgba(232,93,4,.18);
-      --glow-g:0 0 14px rgba(255,214,10,.5);
-    }
+    :root{--bg:#080604;--ember:#2e1200;--orange:#e85d04;--amber:#f48c06;--gold:#ffd60a;--red:#c1440e;--cream:#fff8e7;--ash:#7a6a5a;--glow-o:0 0 18px rgba(232,93,4,.65),0 0 50px rgba(232,93,4,.18);--glow-g:0 0 14px rgba(255,214,10,.5);}
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
     html{scroll-behavior:smooth;}
     body{background:var(--bg);color:var(--cream);font-family:'Crimson Pro',Georgia,serif;font-size:18px;line-height:1.75;overflow-x:hidden;}
@@ -27,15 +21,20 @@
     .pt{position:absolute;bottom:0;border-radius:50%;animation:rise linear infinite;opacity:0;}
     @keyframes rise{0%{transform:translateY(0) scale(1);opacity:.8;}100%{transform:translateY(-220px) scale(0);opacity:0;}}
     .wrap{max-width:880px;margin:0 auto;padding:0 2rem;position:relative;z-index:1;}
+
+    /* NAV */
     nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.9rem 2.5rem;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(to bottom,rgba(8,6,4,.97) 60%,transparent);backdrop-filter:blur(6px);}
     .nav-logo{font-family:'Cinzel Decorative',serif;font-size:1rem;font-weight:700;color:var(--orange);text-decoration:none;text-shadow:var(--glow-o);letter-spacing:.05em;}
     .nav-links{display:flex;gap:2rem;list-style:none;}
     .nav-links a{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ash);text-decoration:none;transition:color .3s,text-shadow .3s;}
     .nav-links a:hover{color:var(--amber);text-shadow:var(--glow-g);}
+
+    /* HERO */
     #home{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:7rem 2rem 4rem;position:relative;z-index:1;}
-    .mascot{width:148px;height:148px;border-radius:50%;object-fit:cover;border:3px solid var(--orange);box-shadow:var(--glow-o),0 0 0 7px rgba(232,93,4,.12);margin-bottom:2rem;animation:float 4s ease-in-out infinite;}
+    .hero-top{display:flex;align-items:center;justify-content:center;gap:2rem;margin-bottom:1.8rem;flex-wrap:wrap;}
+    .mascot{width:140px;height:140px;border-radius:50%;object-fit:cover;border:3px solid var(--orange);box-shadow:var(--glow-o),0 0 0 7px rgba(232,93,4,.12);animation:float 4s ease-in-out infinite;flex-shrink:0;}
     @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
-    .wordart-wrap{position:relative;display:inline-block;margin-bottom:1.2rem;}
+    .wordart-wrap{position:relative;display:inline-block;}
     .star-deco{position:absolute;font-size:1rem;color:var(--gold);animation:twinkle 2.5s ease-in-out infinite;pointer-events:none;line-height:1;}
     .star-deco:nth-child(1){top:-16px;left:-36px;animation-delay:0s;}
     .star-deco:nth-child(2){top:8px;right:-30px;animation-delay:.6s;}
@@ -44,7 +43,7 @@
     .star-deco:nth-child(5){bottom:4px;right:8%;animation-delay:.9s;}
     .star-deco:nth-child(6){top:50%;left:-28px;animation-delay:.3s;}
     @keyframes twinkle{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.2;transform:scale(.6);}}
-    h1.name{font-family:'Cinzel Decorative',serif;font-size:clamp(2.8rem,9vw,6.5rem);font-weight:900;line-height:1.05;background:linear-gradient(135deg,#c1440e 0%,#e85d04 18%,#f48c06 36%,#ffd60a 52%,#fff8e7 62%,#ffd60a 72%,#f48c06 84%,#e85d04 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 22px rgba(232,93,4,.85)) drop-shadow(0 0 55px rgba(244,140,6,.35));animation:nameFlicker 4s ease-in-out infinite;letter-spacing:.02em;}
+    h1.name{font-family:'Cinzel Decorative',serif;font-size:clamp(2.2rem,7vw,5.5rem);font-weight:900;line-height:1.05;background:linear-gradient(135deg,#c1440e 0%,#e85d04 18%,#f48c06 36%,#ffd60a 52%,#fff8e7 62%,#ffd60a 72%,#f48c06 84%,#e85d04 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 22px rgba(232,93,4,.85)) drop-shadow(0 0 55px rgba(244,140,6,.35));animation:nameFlicker 4s ease-in-out infinite;letter-spacing:.02em;}
     @keyframes nameFlicker{0%,100%{filter:drop-shadow(0 0 22px rgba(232,93,4,.85)) drop-shadow(0 0 55px rgba(244,140,6,.35));}30%{filter:drop-shadow(0 0 35px rgba(232,93,4,1)) drop-shadow(0 0 75px rgba(255,214,10,.55));}60%{filter:drop-shadow(0 0 16px rgba(193,68,14,.9)) drop-shadow(0 0 40px rgba(232,93,4,.25));}}
     .tagline{font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;color:var(--ash);margin-bottom:1.6rem;}
     .hero-bio{max-width:540px;font-size:1.05rem;color:rgba(255,248,231,.75);line-height:1.85;margin-bottom:2.2rem;}
@@ -57,6 +56,12 @@
     .btn-ghost{border-color:var(--ash);color:var(--ash);}
     .btn-ghost::before{background:var(--ash);}
     .btn-ghost:hover{box-shadow:none;color:var(--bg);}
+
+    /* MASCOT2 — floats beside about section */
+    .mascot2-float{position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:180px;opacity:.92;pointer-events:none;animation:float2 5s ease-in-out infinite;filter:drop-shadow(0 0 18px rgba(232,93,4,.5));}
+    @keyframes float2{0%,100%{transform:translateY(-50%) rotate(-3deg);}50%{transform:translateY(calc(-50% - 14px)) rotate(3deg);}}
+
+    /* SLIDER */
     .slider-section{overflow:hidden;padding:2.8rem 0;background:linear-gradient(to bottom,transparent,rgba(46,18,0,.25),transparent);position:relative;z-index:1;}
     .slider-label{font-family:'Cinzel',serif;font-size:.82rem;letter-spacing:.38em;text-transform:uppercase;color:var(--amber);text-align:center;margin-bottom:1.6rem;text-shadow:0 0 12px rgba(244,140,6,.5);}
     .slider-rows{display:flex;flex-direction:column;gap:.75rem;}
@@ -66,40 +71,20 @@
     .slider-track:hover{animation-play-state:paused;}
     @keyframes scrollL{from{transform:translateX(0);}to{transform:translateX(-50%);}}
     @keyframes scrollR{from{transform:translateX(-50%);}to{transform:translateX(0);}}
-    .chip{
-      position:relative; width:140px; height:100px;
-      border:1px solid rgba(232,93,4,.3);
-      overflow:hidden; flex-shrink:0;
-      text-decoration:none; cursor:default;
-      background:#1a0a02 center/cover no-repeat;
-    }
+
+    /* CHIP CARDS */
+    .chip{position:relative;width:140px;height:100px;border:1px solid rgba(232,93,4,.3);overflow:hidden;flex-shrink:0;text-decoration:none;cursor:default;display:block;}
     a.chip{cursor:pointer;}
-    .chip-bg{
-      position:absolute; inset:0;
-      background:inherit; background-size:cover; background-position:center;
-      transition:transform .4s ease, filter .4s ease;
-      filter:brightness(.55) saturate(.8);
-    }
-    .chip:hover .chip-bg{transform:scale(1.08);filter:brightness(.35) saturate(.6);}
-    .chip-overlay{
-      position:absolute; inset:0;
-      background:linear-gradient(to top, rgba(232,93,4,.7) 0%, transparent 60%);
-      opacity:0; transition:opacity .35s ease;
-    }
+    .chip-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .4s ease,filter .4s ease;filter:brightness(.6) saturate(.8);}
+    .chip:hover .chip-bg{transform:scale(1.08);filter:brightness(.3) saturate(.5);}
+    .chip-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(232,93,4,.75) 0%,transparent 65%);opacity:0;transition:opacity .35s ease;}
     .chip:hover .chip-overlay{opacity:1;}
-    .chip-label{
-      position:absolute; inset:0;
-      display:flex; align-items:center; justify-content:center;
-      font-family:'Cinzel',serif; font-size:.65rem; letter-spacing:.12em;
-      text-transform:uppercase; color:var(--cream);
-      text-align:center; padding:.4rem;
-      opacity:0; transform:translateY(6px);
-      transition:opacity .3s ease, transform .3s ease;
-      text-shadow:0 1px 8px rgba(0,0,0,.9);
-      line-height:1.4;
-    }
-    .chip:hover .chip-label{opacity:1; transform:translateY(0);}
-    .chip:hover{border-color:var(--orange); box-shadow:var(--glow-o);}
+    .chip-label{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cream);text-align:center;padding:.5rem;opacity:0;transform:translateY(6px);transition:opacity .3s ease,transform .3s ease;text-shadow:0 1px 8px rgba(0,0,0,.9);line-height:1.4;}
+    .chip:hover .chip-label{opacity:1;transform:translateY(0);}
+    .chip:hover{border-color:var(--orange);box-shadow:var(--glow-o);}
+    .chip-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:2rem;background:linear-gradient(135deg,#2e1200,#1a0a02);}
+
+    /* SECTIONS */
     section{padding:5rem 0;position:relative;z-index:1;}
     .sec-label{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.38em;text-transform:uppercase;color:var(--orange);margin-bottom:.4rem;}
     .sec-head{font-family:'Cinzel Decorative',serif;font-size:clamp(1.4rem,3.5vw,2.2rem);font-weight:700;color:var(--cream);margin-bottom:2.5rem;line-height:1.2;}
@@ -113,7 +98,9 @@
     .two-col{display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
     .badge-list{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-top:1rem;}
     .badge-list li{font-size:.92rem;color:rgba(255,248,231,.7);display:flex;align-items:flex-start;gap:.6rem;}
-    .badge-list li::before{content:'◆';color:var(--orange);font-size:.45rem;flex-shrink:0;margin-top:8px;}
+    .badge-list li::before{content:'&#9670;';color:var(--orange);font-size:.45rem;flex-shrink:0;margin-top:8px;}
+
+    /* PROJECTS */
     #projects{background:linear-gradient(to bottom,transparent,rgba(46,18,0,.18),transparent);}
     .proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:1.4rem;}
     .proj-card{border:1px solid rgba(232,93,4,.22);background:rgba(17,11,5,.85);padding:1.5rem;text-decoration:none;display:block;transition:all .3s;position:relative;overflow:hidden;backdrop-filter:blur(4px);}
@@ -124,6 +111,8 @@
     .proj-desc{font-size:.92rem;color:rgba(255,248,231,.62);line-height:1.65;margin-bottom:1rem;}
     .tags{display:flex;flex-wrap:wrap;gap:.35rem;}
     .tag{font-family:'Cinzel',serif;font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .55rem;border:1px solid rgba(232,93,4,.35);color:var(--ash);}
+
+    /* SPOTIFY */
     .spotify-box{border:1px solid rgba(232,93,4,.2);background:linear-gradient(135deg,rgba(28,10,0,.85),rgba(8,6,4,.92));padding:2rem;backdrop-filter:blur(10px);}
     .track{display:grid;grid-template-columns:1.8rem 58px 1fr 1.2rem;align-items:center;gap:1rem;padding:.9rem 0;border-bottom:1px solid rgba(232,93,4,.1);text-decoration:none;color:inherit;transition:all .3s;}
     .track:last-child{border-bottom:none;}
@@ -142,8 +131,8 @@
     .np-dot.live{background:#1db954;box-shadow:0 0 8px rgba(29,185,84,.8);animation:pulse 1.5s ease-in-out infinite;}
     @keyframes pulse{0%,100%{box-shadow:0 0 8px rgba(29,185,84,.8);}50%{box-shadow:0 0 18px rgba(29,185,84,1);}}
     .now-playing-card{display:grid;grid-template-columns:72px 1fr auto;align-items:center;gap:1.2rem;}
-    .np-art{width:72px;height:72px;object-fit:cover;border:1px solid rgba(232,93,4,.4);box-shadow:0 0 20px rgba(232,93,4,.2);}
-    .np-track{font-family:'Cinzel',serif;font-size:.82rem;letter-spacing:.05em;color:var(--cream);margin-bottom:.2rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    .np-art{width:72px;height:72px;object-fit:cover;border:1px solid rgba(232,93,4,.4);}
+    .np-track{font-family:'Cinzel',serif;font-size:.82rem;color:var(--cream);margin-bottom:.2rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
     .np-artist{font-size:.88rem;color:var(--ash);margin-bottom:.7rem;}
     .np-bar-wrap{height:3px;background:rgba(255,255,255,.1);border-radius:2px;overflow:hidden;}
     .np-bar{height:100%;background:linear-gradient(to right,var(--orange),var(--amber));width:0%;transition:width 1s linear;}
@@ -152,6 +141,8 @@
     .np-offline{color:var(--ash);font-size:.9rem;font-style:italic;}
     .artist-embeds{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin-top:1.5rem;}
     .sp-embed{width:100%;height:152px;border:1px solid rgba(232,93,4,.2);display:block;}
+
+    /* FOOTER */
     footer{padding:4rem 0 2rem;border-top:1px solid rgba(232,93,4,.15);text-align:center;position:relative;z-index:1;}
     .foot-name{font-family:'Cinzel Decorative',serif;font-size:1.1rem;color:var(--orange);margin-bottom:.35rem;}
     .foot-loc{color:var(--ash);font-size:.85rem;margin-bottom:1.4rem;}
@@ -162,21 +153,23 @@
     .foot-copy a{color:inherit;text-decoration:none;}
     .fi{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
     .fi.in{opacity:1;transform:translateY(0);}
+
+    @media(max-width:900px){.mascot2-float{display:none;}}
     @media(max-width:680px){
       .about-grid,.two-col{grid-template-columns:1fr;}
       .nav-links{gap:1rem;}
-      h1.name{font-size:clamp(2.2rem,13vw,4rem);}
-      .spotify-box{padding:1.5rem 1rem;}
+      h1.name{font-size:clamp(2rem,11vw,3.5rem);}
+      .hero-top{flex-direction:column;gap:1rem;}
       .track{grid-template-columns:1.5rem 48px 1fr;}
-      .tarrow{display:none;}
+      .tarrow,.np-open{display:none;}
       .proj-grid{grid-template-columns:1fr;}
       .now-playing-card{grid-template-columns:58px 1fr;}
-      .np-open{display:none;}
     }
   </style>
 </head>
 <body>
 <div id="particles" aria-hidden="true"></div>
+
 <nav>
   <a href="#home" class="nav-logo">&#x1F525; FireStar</a>
   <ul class="nav-links">
@@ -186,17 +179,20 @@
     <li><a href="https://github.com/Fire-StarPlayz" target="_blank" rel="noopener">GitHub</a></li>
   </ul>
 </nav>
+
 <section id="home">
-  <img src="public/Images/mascot.png" alt="FireStar cat mascot" class="mascot"
-    onerror="this.src='public/images/mascot.png';this.onerror=()=>this.style.display='none';" />
-  <div class="wordart-wrap">
-    <span class="star-deco" aria-hidden="true">&#x2726;</span>
-    <span class="star-deco" aria-hidden="true">&#x2727;</span>
-    <span class="star-deco" aria-hidden="true">&#x2726;</span>
-    <span class="star-deco" aria-hidden="true">&#x2727;</span>
-    <span class="star-deco" aria-hidden="true">&#x2726;</span>
-    <span class="star-deco" aria-hidden="true">&#x2727;</span>
-    <h1 class="name">Parker Bradfield</h1>
+  <div class="hero-top">
+    <img src="public/Images/mascot.png" alt="FireStar mascot" class="mascot"
+      onerror="this.src='public/images/mascot.png';this.onerror=()=>this.style.display='none';"/>
+    <div class="wordart-wrap">
+      <span class="star-deco" aria-hidden="true">&#x2726;</span>
+      <span class="star-deco" aria-hidden="true">&#x2727;</span>
+      <span class="star-deco" aria-hidden="true">&#x2726;</span>
+      <span class="star-deco" aria-hidden="true">&#x2727;</span>
+      <span class="star-deco" aria-hidden="true">&#x2726;</span>
+      <span class="star-deco" aria-hidden="true">&#x2727;</span>
+      <h1 class="name">Parker Bradfield</h1>
+    </div>
   </div>
   <p class="tagline">&#x2726; &nbsp; FireStar &nbsp;&middot;&nbsp; Developer &nbsp;&middot;&nbsp; Swimmer &nbsp;&middot;&nbsp; Engineer &nbsp; &#x2726;</p>
   <p class="hero-bio">
@@ -209,6 +205,7 @@
     <a href="https://github.com/Fire-StarPlayz" target="_blank" rel="noopener" class="btn btn-ghost">GitHub &#x2197;</a>
   </div>
 </section>
+
 <div class="slider-section">
   <p class="slider-label">&#x2726; &nbsp; Things I Like &nbsp; &#x2726;</p>
   <div class="slider-rows">
@@ -216,8 +213,12 @@
     <div class="slider-mask"><div class="slider-track rev" id="row2"></div></div>
   </div>
 </div>
+
 <section id="about">
-  <div class="wrap">
+  <div class="wrap" style="position:relative;">
+    <!-- mascot2 floats to the right of the about section -->
+    <img src="public/Images/mascot2.png" alt="FireStar" class="mascot2-float"
+      onerror="this.style.display='none'"/>
     <p class="sec-label fi">Who I Am</p>
     <h2 class="sec-head fi">The Warrior Behind the Code</h2>
     <div class="about-grid">
@@ -263,6 +264,7 @@
     </div>
   </div>
 </section>
+
 <section id="projects">
   <div class="wrap">
     <p class="sec-label fi">What I Build</p>
@@ -273,46 +275,40 @@
     </div>
   </div>
 </section>
+
 <section id="music">
   <div class="wrap">
     <p class="sec-label fi">What I'm Listening To</p>
     <h2 class="sec-head fi">Music</h2>
     <div class="now-playing-wrap fi" id="nowPlayingWrap">
-      <p class="now-playing-label">
-        <span class="np-dot" id="npDot"></span>
-        <span id="npStatus">Checking Spotify&hellip;</span>
-      </p>
+      <p class="now-playing-label"><span class="np-dot" id="npDot"></span><span id="npStatus">Checking Spotify&hellip;</span></p>
       <div class="now-playing-card" id="nowPlayingCard" style="display:none">
-        <img id="npArt" src="" alt="album art" class="np-art" />
-        <div class="np-info">
-          <p class="np-track" id="npTrack">&mdash;</p>
-          <p class="np-artist" id="npArtist">&mdash;</p>
-          <div class="np-bar-wrap"><div class="np-bar" id="npBar"></div></div>
-        </div>
+        <img id="npArt" src="" alt="album art" class="np-art"/>
+        <div><p class="np-track" id="npTrack">&mdash;</p><p class="np-artist" id="npArtist">&mdash;</p><div class="np-bar-wrap"><div class="np-bar" id="npBar"></div></div></div>
         <a id="npLink" href="https://open.spotify.com" target="_blank" rel="noopener" class="np-open">&#x2197;</a>
       </div>
       <p class="np-offline" id="npOffline" style="display:none">&#x1F3B5; &nbsp; Not listening right now</p>
     </div>
-    <p class="sec-label fi">Top Tracks</p>
+    <p class="sec-label fi" style="margin-bottom:.4rem;">Top Tracks</p>
     <div class="spotify-box fi" id="spotifyBox"><p style="color:var(--ash);font-style:italic;">Loading&hellip;</p></div>
     <div style="margin-top:3rem" class="fi">
       <p class="sec-label">Top Artists</p>
-      <p style="font-size:.8rem;color:var(--ash);margin:.4rem 0 1rem;font-style:italic;">&#x2726; Find an artist on Spotify, copy the ID from the URL (the part after /artist/), and paste it below replacing ARTIST_ID</p>
+      <p style="font-size:.8rem;color:var(--ash);margin:.4rem 0 1rem;font-style:italic;">&#x2726; Find an artist on Spotify, copy the ID from their URL (after /artist/), paste it below replacing ARTIST_ID</p>
       <div class="artist-embeds">
-        <!-- Replace ARTIST_ID with a real Spotify artist ID, e.g. 06HL4z0CvFAxyc27GXpf02 for Taylor Swift -->
         <!-- <iframe class="sp-embed" src="https://open.spotify.com/embed/artist/ARTIST_ID?utm_source=generator&theme=0" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
-        <p style="color:var(--ash);font-style:italic;font-size:.85rem;">&#x2726; Add your favourite artists above &mdash; just paste your Spotify artist IDs &#x1F525;</p>
+        <p style="color:var(--ash);font-style:italic;font-size:.85rem;">&#x2726; Paste your Spotify artist IDs here &#x1F525;</p>
       </div>
     </div>
   </div>
 </section>
+
 <footer>
   <div class="wrap">
     <p class="foot-name">&#x1F525; Parker &ldquo;FireStar&rdquo; Bradfield</p>
     <p class="foot-loc">Winter Park, FL</p>
     <ul class="foot-links">
       <li><a href="https://github.com/Fire-StarPlayz" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>GitHub</a></li>
-      <li><a href="/cdn-cgi/l/email-protection#6212031009071000100306040b070e065b22050f030b0e4c010d0f"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>Email</a></li>
+      <li><a href="mailto:parkerbradfield9@gmail.com"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>Email</a></li>
       <li><a href="https://discord.com/users/588041630238507113" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>Discord</a></li>
       <li><a href="https://www.instagram.com/p_brad.25/" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>Instagram</a></li>
       <li><a href="https://www.youtube.com/channel/UC-k0O_XvCFXKbyUpljiD2lg" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</a></li>
@@ -320,24 +316,25 @@
     <p class="foot-copy">&copy; <span id="yr"></span> Parker Bradfield &nbsp;&middot;&nbsp; Made with &#x1F525; &nbsp;&middot;&nbsp; <a href="https://github.com/Fire-StarPlayz/website">source</a></p>
   </div>
 </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
+<script>
 const ROW1=[
-  {label:'Overwatch 2',       img:'https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt15c1d7ab4f59a2df/638cd8e65b3e063d9cf9a7b3/ow2-logo.png',            url:'https://overwatch.blizzard.com'},
-  {label:'Super Smash Bros',  img:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Super_Smash_Bros._Ultimate_logo.png/320px-Super_Smash_Bros._Ultimate_logo.png',          url:'https://www.smashbros.com'},
-  {label:'Minecraft',         img:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Minecraft_grass_block.png/240px-Minecraft_grass_block.png',                              url:'https://minecraft.net'},
-  {label:'Diablo IV',         img:'https://bnetcmsus-a.akamaihd.net/cms/gallery/NQBXCO9GSZMM1682557254377.jpg',                                                                       url:'https://diablo4.blizzard.com'},
-  {label:'Hollow Knight',     img:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Hollow_Knight_cover.jpg/240px-Hollow_Knight_cover.jpg',                                   url:'https://www.hollowknight.com'},
-  {label:'Swimming',          img:'https://images.unsplash.com/photo-1530549387789-4c1017266635?w=400&q=80',                                                                           url:''},
-  {label:'Coding',            img:'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&q=80',                                                                           url:'https://github.com/Fire-StarPlayz'},
+  {label:'Overwatch 2',      img:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Overwatch_logo.svg/240px-Overwatch_logo.svg.png',url:'https://overwatch.blizzard.com'},
+  {label:'Super Smash Bros', img:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Super_Smash_Bros._Ultimate_logo.png/320px-Super_Smash_Bros._Ultimate_logo.png',url:'https://www.smashbros.com'},
+  {label:'Minecraft',        img:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Minecraft_cover.png/120px-Minecraft_cover.png',url:'https://minecraft.net'},
+  {label:'Diablo IV',        img:'https://bnetcmsus-a.akamaihd.net/cms/gallery/NQBXCO9GSZMM1682557254377.jpg',url:'https://diablo4.blizzard.com'},
+  {label:'Hollow Knight',    img:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Hollow_Knight_cover.jpg/240px-Hollow_Knight_cover.jpg',url:'https://www.hollowknight.com'},
+  {label:'Swimming',         img:'https://images.unsplash.com/photo-1530549387789-4c1017266635?w=400&q=80',url:''},
+  {label:'Coding',           img:'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&q=80',url:'https://github.com/Fire-StarPlayz'},
 ];
 const ROW2=[
-  {label:'Warriors Cats',     img:'https://upload.wikimedia.org/wikipedia/en/thumb/8/84/WarriorCatsIntoTheWild.jpg/220px-WarriorCatsIntoTheWild.jpg',                                  url:'https://warriorcats.com'},
-  {label:'Litten',            img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/728.png',                                           url:'https://www.pokemon.com/us/pokedex/litten'},
-  {label:'AI / ML',           img:'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=80',                                                                           url:'https://github.com/Fire-StarPlayz'},
-  {label:'Mech Engineering',  img:'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=80',                                                                           url:''},
-  {label:'Smart Mirror',      img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80',                                                                              url:'https://github.com/Fire-StarPlayz'},
-  {label:'ESPORTS',           img:'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&q=80',                                                                              url:''},
-  {label:'Stargazing',        img:'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400&q=80',                                                                            url:''},
+  {label:'Warriors Cats',    img:'https://upload.wikimedia.org/wikipedia/en/thumb/8/84/WarriorCatsIntoTheWild.jpg/220px-WarriorCatsIntoTheWild.jpg',url:'https://warriorcats.com'},
+  {label:'Litten',           img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/728.png',url:'https://www.pokemon.com/us/pokedex/litten'},
+  {label:'AI / ML',          img:'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=80',url:'https://github.com/Fire-StarPlayz'},
+  {label:'Mech Engineering', img:'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=80',url:''},
+  {label:'Smart Mirror',     img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80',url:'https://github.com/Fire-StarPlayz'},
+  {label:'ESPORTS',          img:'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&q=80',url:''},
+  {label:'Stargazing',       img:'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400&q=80',url:''},
 ];
 const PROJECTS=[
   {name:'Magic Mirror',desc:'A smart mirror with microphone, speech, and a locally running AI model.',tags:['Python','AI','Hardware'],url:'https://github.com/Fire-StarPlayz'},
@@ -354,31 +351,103 @@ const TRACKS=[
   {num:4,name:'Fourth Song',artist:'Artist Name',albumArt:'',url:'https://open.spotify.com'},
   {num:5,name:'Fifth Song',artist:'Artist Name',albumArt:'',url:'https://open.spotify.com'},
 ];
-document.getElementById('yr').textContent=new Date().getFullYear();
-function buildRow(items,id){
-  const row=document.getElementById(id);
-  [...items,...items].forEach(item=>{
-    const el=item.url?document.createElement('a'):document.createElement('div');
-    el.className='chip';
-    if(item.url){el.href=item.url;el.target='_blank';el.rel='noopener';}
-    // bg image via inline style
-    if(item.img){el.style.backgroundImage=`url('${item.img}')`;}
-    else{el.style.background=`linear-gradient(135deg,#2e1200,#1a0a02)`;}
-    el.innerHTML=`
-      <div class="chip-bg" ${item.img?`style="background-image:url('${item.img}')"`:``}></div>
-      <div class="chip-overlay"></div>
-      <span class="chip-label">${item.label}</span>`;
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+function buildRow(items, id) {
+  const row = document.getElementById(id);
+  [...items, ...items].forEach(item => {
+    const el = item.url ? document.createElement('a') : document.createElement('div');
+    el.className = 'chip';
+    if (item.url) { el.href = item.url; el.target = '_blank'; el.rel = 'noopener'; }
+    const bgDiv = document.createElement('div');
+    bgDiv.className = 'chip-bg';
+    if (item.img) {
+      bgDiv.style.backgroundImage = "url('" + item.img + "')";
+    } else {
+      bgDiv.style.background = 'linear-gradient(135deg,#2e1200,#1a0a02)';
+    }
+    const overlay = document.createElement('div');
+    overlay.className = 'chip-overlay';
+    const label = document.createElement('span');
+    label.className = 'chip-label';
+    label.textContent = item.label;
+    el.appendChild(bgDiv);
+    el.appendChild(overlay);
+    el.appendChild(label);
     row.appendChild(el);
   });
 }
-buildRow(ROW1,'row1');buildRow(ROW2,'row2');
-const grid=document.getElementById('projGrid');
-PROJECTS.forEach((p,i)=>{const a=document.createElement('a');a.className='proj-card fi';a.href=p.url;a.target='_blank';a.rel='noopener noreferrer';a.style.transitionDelay=(i*0.07)+'s';a.innerHTML=`<p class="proj-name">${p.name}</p><p class="proj-desc">${p.desc}</p><div class="tags">${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>`;grid.appendChild(a);});
-const box=document.getElementById('spotifyBox');
-box.innerHTML=TRACKS.map(t=>`<a href="${t.url}" target="_blank" rel="noopener" class="track"><span class="tnum">${t.num}</span>${t.albumArt?`<img src="${t.albumArt}" alt="${t.name}" class="tart">`:`<div class="tart-ph">&#x1F3B5;</div>`}<div><p class="tname">${t.name}</p><p class="tartist">${t.artist}</p></div><span class="tarrow">&#x2197;</span></a>`).join('')+`<p class="spotify-note">&#x2726; &nbsp; Click any track to open in Spotify</p>`;
-async function fetchNowPlaying(){try{const res=await fetch('/api/now-playing');if(!res.ok)throw new Error();const data=await res.json();const dot=document.getElementById('npDot'),status=document.getElementById('npStatus'),card=document.getElementById('nowPlayingCard'),offline=document.getElementById('npOffline');if(data.isPlaying){dot.classList.add('live');status.textContent='Now Playing';document.getElementById('npArt').src=data.albumArt;document.getElementById('npTrack').textContent=data.name;document.getElementById('npArtist').textContent=data.artist;document.getElementById('npBar').style.width=((data.progress/data.duration)*100)+'%';document.getElementById('npLink').href=data.url;card.style.display='grid';offline.style.display='none';}else{dot.classList.remove('live');status.textContent='Spotify';card.style.display='none';offline.style.display='block';}}catch{document.getElementById('nowPlayingWrap').style.display='none';}}
-fetchNowPlaying();setInterval(fetchNowPlaying,30000);
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:0.1});
-document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
-const pc=document.getElementById('particles');const cols=['#e85d04','#f48c06','#ffd60a','#dc2f02','#ff8500'];
-setInterval(()=>{const p=document.createElement('div');p.className='pt';const sz=2+Math.random()*4;const dur=1.4+Math.random()*2;p.style.cssText=`left:${Math.random()*100}%;width:${sz}px;height:${sz}px;background:${cols[Math.floor(Math.random()*cols.length)]};ani
+buildRow(ROW1, 'row1');
+buildRow(ROW2, 'row2');
+
+const grid = document.getElementById('projGrid');
+PROJECTS.forEach((p, i) => {
+  const a = document.createElement('a');
+  a.className = 'proj-card fi';
+  a.href = p.url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+  a.style.transitionDelay = (i * 0.07) + 's';
+  a.innerHTML = '<p class="proj-name">' + p.name + '</p><p class="proj-desc">' + p.desc + '</p><div class="tags">' + p.tags.map(t => '<span class="tag">' + t + '</span>').join('') + '</div>';
+  grid.appendChild(a);
+});
+
+const box = document.getElementById('spotifyBox');
+box.innerHTML = TRACKS.map(t =>
+  '<a href="' + t.url + '" target="_blank" rel="noopener" class="track">' +
+  '<span class="tnum">' + t.num + '</span>' +
+  (t.albumArt ? '<img src="' + t.albumArt + '" alt="' + t.name + '" class="tart">' : '<div class="tart-ph">&#x1F3B5;</div>') +
+  '<div><p class="tname">' + t.name + '</p><p class="tartist">' + t.artist + '</p></div>' +
+  '<span class="tarrow">&#x2197;</span></a>'
+).join('') + '<p class="spotify-note">&#x2726; &nbsp; Click any track to open in Spotify</p>';
+
+async function fetchNowPlaying() {
+  try {
+    const res = await fetch('/api/now-playing');
+    if (!res.ok) throw new Error();
+    const data = await res.json();
+    const dot = document.getElementById('npDot');
+    const status = document.getElementById('npStatus');
+    const card = document.getElementById('nowPlayingCard');
+    const offline = document.getElementById('npOffline');
+    if (data.isPlaying) {
+      dot.classList.add('live');
+      status.textContent = 'Now Playing';
+      document.getElementById('npArt').src = data.albumArt;
+      document.getElementById('npTrack').textContent = data.name;
+      document.getElementById('npArtist').textContent = data.artist;
+      document.getElementById('npBar').style.width = ((data.progress / data.duration) * 100) + '%';
+      document.getElementById('npLink').href = data.url;
+      card.style.display = 'grid';
+      offline.style.display = 'none';
+    } else {
+      dot.classList.remove('live');
+      status.textContent = 'Spotify';
+      card.style.display = 'none';
+      offline.style.display = 'block';
+    }
+  } catch(e) {
+    document.getElementById('nowPlayingWrap').style.display = 'none';
+  }
+}
+fetchNowPlaying();
+setInterval(fetchNowPlaying, 30000);
+
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fi').forEach(el => obs.observe(el));
+
+const pc = document.getElementById('particles');
+const cols = ['#e85d04','#f48c06','#ffd60a','#dc2f02','#ff8500'];
+setInterval(() => {
+  const p = document.createElement('div');
+  p.className = 'pt';
+  const sz = 2 + Math.random() * 4;
+  const dur = 1.4 + Math.random() * 2;
+  p.style.cssText = 'left:' + (Math.random()*100) + '%;width:' + sz + 'px;height:' + sz + 'px;background:' + cols[Math.floor(Math.random()*cols.length)] + ';animation-duration:' + dur + 's;animation-delay:' + (Math.random()*0.4) + 's;';
+  pc.appendChild(p);
+  setTimeout(() => p.remove(), (dur + 0.6) * 1000);
+}, 140);
+</script>
+</body>
+</html>
