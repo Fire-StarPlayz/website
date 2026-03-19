@@ -231,36 +231,27 @@
     }
     .slider-label {
       font-family:'Cinzel',serif;
-      font-size:.82rem; letter-spacing:.38em; text-transform:uppercase;
-      color:var(--amber); text-align:center; margin-bottom:1.6rem;
-      text-shadow: 0 0 12px rgba(244,140,6,.5);
+      font-size:.62rem; letter-spacing:.38em; text-transform:uppercase;
+      color:var(--ash); text-align:center; margin-bottom:1.4rem;
     }
-    .slider-rows { display:flex; flex-direction:column; gap:.75rem; }
     .slider-mask {
       overflow:hidden;
-      -webkit-mask-image:linear-gradient(to right,transparent,black 6%,black 94%,transparent);
-      mask-image:linear-gradient(to right,transparent,black 6%,black 94%,transparent);
+      -webkit-mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent);
+      mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent);
     }
     .slider-track {
-      display:flex; gap:.75rem;
+      display:flex; gap:1rem;
       animation:scrollL 35s linear infinite;
       width:max-content;
-    }
-    .slider-track.reverse {
-      animation:scrollR 40s linear infinite;
     }
     .slider-track:hover { animation-play-state:paused; }
     @keyframes scrollL {
       from{transform:translateX(0);}
       to  {transform:translateX(-50%);}
     }
-    @keyframes scrollR {
-      from{transform:translateX(-50%);}
-      to  {transform:translateX(0);}
-    }
     .chip {
-      display:flex; align-items:center; gap:.6rem;
-      padding:.5rem 1rem;
+      display:flex; align-items:center; gap:.55rem;
+      padding:.55rem 1.15rem;
       border:1px solid rgba(232,93,4,.28);
       background:rgba(46,18,0,.45);
       white-space:nowrap;
@@ -268,17 +259,8 @@
       color:var(--cream);
       transition:all .3s; cursor:default;
       backdrop-filter:blur(4px);
-      text-decoration:none;
     }
-    .chip.clickable { cursor:pointer; }
     .chip:hover { border-color:var(--orange); background:rgba(232,93,4,.18); color:var(--amber); box-shadow:var(--glow-o); }
-    .chip-img {
-      width:28px; height:28px;
-      border-radius:4px; object-fit:cover;
-      border:1px solid rgba(232,93,4,.3);
-      flex-shrink:0;
-    }
-    .chip-icon { font-size:1.1rem; line-height:1; }
 
     /* ── SECTIONS ── */
     section { padding:5rem 0; position:relative; z-index:1; }
@@ -349,80 +331,6 @@
     .track:hover .tarrow { opacity:1; }
     .spotify-note { font-size:.78rem; color:var(--ash); margin-top:1.4rem; font-style:italic; }
 
-    /* ── NOW PLAYING ── */
-    .now-playing-wrap {
-      border:1px solid rgba(232,93,4,.2);
-      background:linear-gradient(135deg,rgba(28,10,0,.85),rgba(8,6,4,.92));
-      padding:1.8rem 2rem;
-      backdrop-filter:blur(10px);
-    }
-    .now-playing-label {
-      font-family:'Cinzel',serif;
-      font-size:.65rem; letter-spacing:.25em; text-transform:uppercase;
-      color:var(--ash); margin-bottom:1rem;
-      display:flex; align-items:center; gap:.6rem;
-    }
-    .np-dot {
-      width:8px; height:8px; border-radius:50%;
-      background:var(--ash); flex-shrink:0;
-      transition:background .3s;
-    }
-    .np-dot.live {
-      background:#1db954;
-      box-shadow:0 0 8px rgba(29,185,84,.8);
-      animation:pulse 1.5s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0%,100%{box-shadow:0 0 8px rgba(29,185,84,.8);}
-      50%    {box-shadow:0 0 16px rgba(29,185,84,1);}
-    }
-    .now-playing-card {
-      display:grid;
-      grid-template-columns:72px 1fr auto;
-      align-items:center; gap:1.2rem;
-    }
-    .np-art {
-      width:72px; height:72px; object-fit:cover;
-      border:1px solid rgba(232,93,4,.4);
-      box-shadow:0 0 20px rgba(232,93,4,.2);
-    }
-    .np-track {
-      font-family:'Cinzel',serif; font-size:.82rem;
-      letter-spacing:.05em; color:var(--cream);
-      margin-bottom:.2rem;
-      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
-    }
-    .np-artist { font-size:.88rem; color:var(--ash); margin-bottom:.7rem; }
-    .np-bar-wrap {
-      height:3px; background:rgba(255,255,255,.1);
-      border-radius:2px; overflow:hidden;
-    }
-    .np-bar {
-      height:100%;
-      background:linear-gradient(to right,var(--orange),var(--amber));
-      width:0%; transition:width 1s linear;
-    }
-    .np-open {
-      color:var(--amber); font-size:1.1rem;
-      opacity:.5; transition:opacity .3s; text-decoration:none;
-    }
-    .now-playing-card:hover .np-open { opacity:1; }
-    .np-offline {
-      color:var(--ash); font-size:.9rem; font-style:italic;
-    }
-
-    /* ── ARTIST EMBEDS ── */
-    .artist-embeds {
-      display:grid;
-      grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-      gap:1rem;
-    }
-    .sp-embed {
-      width:100%; height:152px;
-      border-radius:0;
-      border:1px solid rgba(232,93,4,.2);
-    }
-
     /* ── FOOTER ── */
     footer {
       padding:4rem 0 2rem;
@@ -487,7 +395,7 @@
   </div>
 
   <!-- ════ EDIT: your tagline ════ -->
-  <p class="tagline">✦ &nbsp; FireStar &nbsp;·&nbsp; Developer &nbsp;·&nbsp; Swimmer &nbsp;·&nbsp; Warrior &nbsp; ✦</p>
+  <p class="tagline">✦ &nbsp; FireStar &nbsp;·&nbsp; Developer &nbsp;·&nbsp; Swimmer &nbsp;·&nbsp; Engineer &nbsp; ✦</p>
 
   <!-- ════ EDIT: your bio ════ -->
   <p class="hero-bio">
@@ -505,13 +413,8 @@
 <!-- ACTIVITY SLIDER -->
 <div class="slider-section">
   <p class="slider-label">✦ &nbsp; Things I Like &nbsp; ✦</p>
-  <div class="slider-rows">
-    <div class="slider-mask">
-      <div class="slider-track" id="sliderRow1"></div>
-    </div>
-    <div class="slider-mask">
-      <div class="slider-track reverse" id="sliderRow2"></div>
-    </div>
+  <div class="slider-mask">
+    <div class="slider-track" aria-hidden="true" id="sliderTrack"></div>
   </div>
 </div>
 
@@ -523,18 +426,18 @@
     <div class="about-grid">
       <div class="about-text fi">
         <!-- ════ EDIT: your about paragraphs ════ -->
-        <p>I'm a senior at <strong>Winter Park High School</strong> with a STEM concentration, a
+        <p>I'm a first year at the <strong>University of Florida</strong>, persuing a Master's in </strong>Mechanical Enginnering</strong>, with a STEM concentration, a
         coding background, and a love for building things — from Discord bots and smart mirrors
         to actual wind tunnels.</p>
-        <p>I've competed in <strong>Lockheed Martin CodeQuest</strong> every year (9–12), placing
+        <p>I've competed in <strong>Lockheed Martin CodeQuest</strong> every year of high school, placing
         <strong>7th overall in 2025</strong>. I'm fluent in Python, JavaScript, HTML, and Lua,
         and I'm always exploring what AI can do next.</p>
-        <p>Outside of code I swim varsity, captain the ESPORTS team, lead Bible Study, and serve
+        <p>Outside of code I swim collegiant, captain the ESPORTS team, led Bible Study, and served
         as SGA Executive Ambassador. My favorite Pokémon is <strong>Litten</strong> 🔥.</p>
       </div>
       <ul class="stat-list fi">
         <!-- ════ EDIT: your stats ════ -->
-        <li><span class="sl">School</span><span>Winter Park HS — Class of 2025</span></li>
+        <li><span class="sl">School</span><span>The Master's Academy — Class of 2025</span></li>
         <li><span class="sl">Focus</span><span>STEM Concentration · InspiritAI Certificate</span></li>
         <li><span class="sl">Athletics</span><span>Varsity Swimming — Districts &amp; Regionals Qualifier · Team Captain</span></li>
         <li><span class="sl">ESPORTS</span><span>UF NECC — Overwatch 4th overall · Smash Bros Playoffs</span></li>
@@ -593,67 +496,10 @@
 <section id="music">
   <div class="wrap">
     <p class="sec-label fi">What I'm Listening To</p>
-    <h2 class="sec-head fi">Music</h2>
-
-    <!-- NOW PLAYING -->
-    <div class="now-playing-wrap fi" id="nowPlayingWrap">
-      <p class="now-playing-label">
-        <span class="np-dot" id="npDot"></span>
-        <span id="npStatus">Checking Spotify…</span>
-      </p>
-      <div class="now-playing-card" id="nowPlayingCard" style="display:none">
-        <img id="npArt" src="" alt="album art" class="np-art" />
-        <div class="np-info">
-          <p class="np-track" id="npTrack">—</p>
-          <p class="np-artist" id="npArtist">—</p>
-          <div class="np-bar-wrap"><div class="np-bar" id="npBar"></div></div>
-        </div>
-        <a id="npLink" href="https://open.spotify.com" target="_blank" rel="noopener" class="np-open">↗</a>
-      </div>
-      <p class="np-offline" id="npOffline" style="display:none">
-        🎵 &nbsp;Not listening right now
-      </p>
+    <h2 class="sec-head fi">Top Tracks</h2>
+    <div class="spotify-box fi" id="spotifyBox">
+      <p style="color:var(--ash);font-style:italic;">Loading tracks…</p>
     </div>
-
-    <!-- TOP TRACKS (manual list) -->
-    <div style="margin-top:3rem">
-      <p class="sec-label fi">Top Tracks</p>
-      <div class="spotify-box fi" id="spotifyBox">
-        <p style="color:var(--ash);font-style:italic;">Loading tracks…</p>
-      </div>
-    </div>
-
-    <!-- TOP ARTISTS EMBED -->
-    <!-- ════════════════════════════════════════════════════════
-         HOW TO GET YOUR TOP ARTISTS EMBED:
-         1. Open open.spotify.com in your browser
-         2. Go to your profile → click a playlist or artist you love
-         3. Click ··· → Share → Embed
-         4. Copy the iframe src URL and paste it below replacing the placeholder
-         OR just paste a direct artist/playlist Spotify URL and we convert it.
-
-         QUICK EMBED FORMAT:
-         Artist:  https://open.spotify.com/embed/artist/ARTIST_ID
-         Playlist:https://open.spotify.com/embed/playlist/PLAYLIST_ID
-
-         To find an artist ID: open the artist on Spotify web,
-         copy the URL — the ID is after /artist/
-    ════════════════════════════════════════════════════════ -->
-    <div style="margin-top:3rem" class="fi">
-      <p class="sec-label">Top Artists</p>
-      <p style="font-size:.8rem;color:var(--ash);margin:.4rem 0 1.5rem;font-style:italic;">
-        ✦ Paste your Spotify artist embed URLs in the HTML to show your favourites here
-      </p>
-      <div class="artist-embeds" id="artistEmbeds">
-        <!-- ════ EDIT: replace ARTIST_ID_HERE with real Spotify artist IDs ════
-             Example IDs to find: go to open.spotify.com/artist/XXXXX
-             The XXXXX part is the ID. Paste up to 3 below. -->
-        <iframe class="sp-embed" src="https://open.spotify.com/embed/artist/ARTIST_ID_HERE?utm_source=generator&theme=0" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <iframe class="sp-embed" src="https://open.spotify.com/embed/artist/ARTIST_ID_HERE_2?utm_source=generator&theme=0" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <iframe class="sp-embed" src="https://open.spotify.com/embed/artist/ARTIST_ID_HERE_3?utm_source=generator&theme=0" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -686,7 +532,7 @@
         YouTube
       </a></li>
     </ul>
-    <p class="foot-copy">© <span id="yr"></span> Parker Bradfield &nbsp;·&nbsp; Made with 🔥 &nbsp;·&nbsp; <a href="https://github.com/Fire-StarPlayz/website">source</a></p>
+    <p class="foot-copy">© <span id="yr"></span> Parker Bradfield &nbsp;·&nbsp; Made with 🔥 &nbsp;·&nbsp; <a href="https://github.com/Fire-StarPlayz/my-website">source</a></p>
   </div>
 </footer>
 
@@ -696,40 +542,22 @@
 // ══════════════════════════════════════════════
 
 // ── SLIDER items ──────────────────────────────
-// img: URL to a small image (or '' to use emoji icon)
-// url: where clicking the chip goes (or '' for no link)
-const SLIDER_ROW1 = [
-  { icon:'🔥', label:'Overwatch 2',            img:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Overwatch_logo.svg/120px-Overwatch_logo.svg.png', url:'https://overwatch.blizzard.com' },
-  { icon:'⚔️', label:'Super Smash Bros',        img:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Super_Smash_Bros._Ultimate_logo.png/120px-Super_Smash_Bros._Ultimate_logo.png', url:'https://www.smashbros.com' },
-  { icon:'⛏️', label:'Minecraft',               img:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Minecraft_cover.png/60px-Minecraft_cover.png', url:'https://minecraft.net' },
-  { icon:'👹', label:'Diablo IV',               img:'https://upload.wikimedia.org/wikipedia/en/thumb/7/7d/Diablo_IV_cover.png/60px-Diablo_IV_cover.png', url:'https://diablo4.blizzard.com' },
-  { icon:'🦋', label:'Hollow Knight: Silksong', img:'', url:'https://www.hollowknight.com' },
-  { icon:'🏊', label:'Swimming',                img:'', url:'' },
-  { icon:'💻', label:'Coding',                  img:'', url:'https://github.com/Fire-StarPlayz' },
+const SLIDER = [
+  { icon:'🔥', label:'Overwatch 2' },
+  { icon:'⚔️', label:'Super Smash Bros' },
+  { icon:'⛏️', label:'Minecraft' },
+  { icon:'👹', label:'Diablo IV' },
+  { icon:'🦋', label:'Hollow Knight: Silksong' },
+  { icon:'🏊', label:'Swimming' },
+  { icon:'💻', label:'Coding' },
+  { icon:'🐱', label:'Warriors Cats' },
+  { icon:'🔴', label:'Pokémon — Litten' },
+  { icon:'🤖', label:'AI / ML' },
+  { icon:'🚀', label:'Mechanical Engineering' },
+  { icon:'🪞', label:'Smart Mirror' },
+  { icon:'🎮', label:'ESPORTS' },
+  { icon:'🌌', label:'Stargazing' },
 ];
-const SLIDER_ROW2 = [
-  { icon:'🐱', label:'Warriors Cats',    img:'', url:'https://warriorcats.com' },
-  { icon:'🔴', label:'Pokémon — Litten', img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/728.png', url:'https://www.pokemon.com/us/pokedex/litten' },
-  { icon:'🤖', label:'AI / ML',          img:'', url:'https://github.com/Fire-StarPlayz' },
-  { icon:'🚀', label:'Mech Engineering', img:'', url:'' },
-  { icon:'🪞', label:'Smart Mirror',     img:'', url:'https://github.com/Fire-StarPlayz' },
-  { icon:'🎮', label:'ESPORTS',          img:'', url:'' },
-  { icon:'🌌', label:'Stargazing',       img:'', url:'' },
-];
-
-function buildSlider(items, rowId) {
-  const row = document.getElementById(rowId);
-  [...items, ...items].forEach(item => {
-    const el = item.url ? document.createElement('a') : document.createElement('div');
-    el.className = 'chip' + (item.url ? ' clickable' : '');
-    if (item.url) { el.href = item.url; el.target = '_blank'; el.rel = 'noopener'; }
-    const media = item.img
-      ? `<img src="${item.img}" alt="${item.label}" class="chip-img" onerror="this.style.display='none'">`
-      : `<span class="chip-icon">${item.icon}</span>`;
-    el.innerHTML = media + `<span>${item.label}</span>`;
-    row.appendChild(el);
-  });
-}
 
 // ── PROJECTS ──────────────────────────────────
 const PROJECTS = [
@@ -746,10 +574,10 @@ const PROJECTS = [
     url:  'https://github.com/Fire-StarPlayz/Trading-Alerts-Discord-Bot',
   },
   {
-    name: 'Ball Simulation',
-    desc: 'Physics-based ball collision simulation with Flask and HTML5 Canvas.',
+    name: 'Physics and Chemisty Experiments',
+    desc: 'Physics- and Chemisty-based labs including a ball collision simulation with Flask and HTML5 Canvas.',
     tags: ['Python','Flask','HTML5'],
-    url:  'https://github.com/Fire-StarPlayz/ball-simulation-flask',
+    url:  'https://drive.google.com/drive/folders/1BwtQBh1bE62mFZ3X4T4rnxOSgw71EjsA?usp=sharing',
   },
   {
     name: 'CodeQuest Solutions',
@@ -761,7 +589,7 @@ const PROJECTS = [
     name: 'Wind Tunnel',
     desc: 'Researched, designed & built a wind tunnel to measure velocity, pressure, and drag.',
     tags: ['Aerospace','Physics','3D Print'],
-    url:  'https://drive.google.com/drive/folders/1BwtQBh1bE62mFZ3X4T4rnxOSgw71EjsA',
+    url:  'https://docs.google.com/presentation/d/1YnISD5xCkTS-FMCVfxOvg0JDA7bSYJauiPckbMHRVZs/edit?usp=drive_link',
   },
   {
     name: 'Defense Wheel Base',
@@ -822,44 +650,14 @@ const TRACKS = [
 document.getElementById('yr').textContent = new Date().getFullYear();
 
 // Slider
-buildSlider(SLIDER_ROW1, 'sliderRow1');
-buildSlider(SLIDER_ROW2, 'sliderRow2');
-
-// Now Playing — calls /api/now-playing serverless function
-async function fetchNowPlaying() {
-  try {
-    const res = await fetch('/api/now-playing');
-    if (!res.ok) throw new Error();
-    const data = await res.json();
-    const dot = document.getElementById('npDot');
-    const status = document.getElementById('npStatus');
-    const card = document.getElementById('nowPlayingCard');
-    const offline = document.getElementById('npOffline');
-
-    if (data.isPlaying) {
-      dot.classList.add('live');
-      status.textContent = 'Now Playing';
-      document.getElementById('npArt').src = data.albumArt;
-      document.getElementById('npTrack').textContent = data.name;
-      document.getElementById('npArtist').textContent = data.artist;
-      document.getElementById('npBar').style.width =
-        ((data.progress / data.duration) * 100) + '%';
-      document.getElementById('npLink').href = data.url;
-      card.style.display = 'grid';
-      offline.style.display = 'none';
-    } else {
-      dot.classList.remove('live');
-      status.textContent = 'Spotify';
-      card.style.display = 'none';
-      offline.style.display = 'block';
-    }
-  } catch {
-    // API not set up yet — hide the whole section gracefully
-    document.getElementById('nowPlayingWrap').style.display = 'none';
-  }
-}
-fetchNowPlaying();
-setInterval(fetchNowPlaying, 30000); // refresh every 30s
+const track = document.getElementById('sliderTrack');
+const doubled = [...SLIDER, ...SLIDER];
+doubled.forEach(item => {
+  const d = document.createElement('div');
+  d.className = 'chip';
+  d.innerHTML = `<span>${item.icon}</span><span>${item.label}</span>`;
+  track.appendChild(d);
+});
 
 // Projects
 const grid = document.getElementById('projGrid');
