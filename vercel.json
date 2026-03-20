@@ -1,7 +1,10 @@
 {
   "outputDirectory": ".",
+  "functions": {
+    "api/now-playing.js": {
+      "runtime": "@vercel/node@3"
+    }
+  },
   "rewrites": [
     { "source": "/api/now-playing", "destination": "/api/now-playing.js" },
     { "source": "/((?!api/).*)", "destination": "/index.html" }
-  ]
-}
