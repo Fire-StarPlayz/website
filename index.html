@@ -111,7 +111,7 @@
     .now-playing-card:hover .np-open{opacity:1;}
     .np-offline{color:var(--ash);font-size:.9rem;font-style:italic;}
     .artist-embeds{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin-top:1.5rem;}
-    .sp-embed{width:100%;height:352px;border:1px solid rgba(232,93,4,.2);display:block;}
+    .sp-embed{width:100%;height:160px;border:1px solid rgba(232,93,4,.2);display:block;}
     footer{padding:4rem 0 2rem;border-top:1px solid rgba(232,93,4,.15);text-align:center;position:relative;z-index:1;}
     .foot-name{font-family:'Cinzel Decorative',serif;font-size:1.1rem;color:var(--orange);margin-bottom:.35rem;}
     .foot-loc{color:var(--ash);font-size:.85rem;margin-bottom:1.4rem;}
@@ -150,7 +150,7 @@
 
 <section id="home">
   <div class="hero-top">
-    <img src="Images/mascot.png" alt="FireStar mascot" class="mascot"
+    <img src="/public/Images/mascot.png" alt="FireStar mascot" class="mascot"
       onerror="this.src='Images/mascot.png';this.onerror=()=>this.style.display='none';"/>
     <div class="wordart-wrap">
       <span class="star-deco" aria-hidden="true">&#x2726;</span>
@@ -184,7 +184,7 @@
 
 <section id="about">
   <div class="wrap" style="position:relative;">
-    <img src="Images/mascot2.png" alt="FireStar" class="mascot2-float" onerror="this.style.display='none'"/>
+    <img src="/public/Images/mascot2.png" alt="FireStar" class="mascot2-float" onerror="this.style.display='none'"/>
     <p class="sec-label fi">Who I Am</p>
     <h2 class="sec-head fi">The Warrior Behind the Code</h2>
     <div class="about-grid">
@@ -246,12 +246,7 @@
   <div class="wrap">
     <p class="sec-label fi">What I'm Listening To</p>
     <h2 class="sec-head fi">Music</h2>
-    <div class="now-playing-wrap fi" id="nowPlayingWrap">
-      <p class="now-playing-label"><span class="np-dot" id="npDot"></span><span id="npStatus">Checking Spotify&hellip;</span></p>
-      <div class="now-playing-card" id="nowPlayingCard" style="display:none">
-        <img id="npArt" src="" alt="album art" class="np-art"/>
-        <div><p class="np-track" id="npTrack">&mdash;</p><p class="np-artist" id="npArtist">&mdash;</p><div class="np-bar-wrap"><div class="np-bar" id="npBar"></div></div></div>
-        <a id="npLink" href="https://open.spotify.com" target="_blank" rel="noopener" class="np-open">&#x2197;</a>
+            <a id="npLink" href="https://open.spotify.com" target="_blank" rel="noopener" class="np-open">&#x2197;</a>
       </div>
       <p class="np-offline" id="npOffline" style="display:none">&#x1F3B5; &nbsp; Not listening right now</p>
     </div>
@@ -293,22 +288,22 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 const ROW1=[
-  {label:'Overwatch 2',      img:'Images/ow2.jpg',         url:'https://overwatch.blizzard.com'},
-  {label:'Super Smash Bros', img:'Images/smash.jpg',       url:'https://www.smashbros.com'},
-  {label:'Minecraft',        img:'Images/minecraft.jpg',   url:'https://minecraft.net'},
-  {label:'Diablo IV',        img:'Images/diablo.jpg',      url:'https://diablo4.blizzard.com'},
-  {label:'Hollow Knight',    img:'Images/hollow.jpg',      url:'https://www.hollowknight.com'},
-  {label:'Swimming',         img:'Images/swimming.jpg',    url:'https://www.swimcloud.com/swimmer/1207251/'},
-  {label:'Coding',           img:'Images/coding.jpg',      url:'https://github.com/Fire-StarPlayz'},
+  {label:'Overwatch 2',      img:'/public/Images/ow2.jpg',         url:'https://overwatch.blizzard.com'},
+  {label:'Super Smash Bros', img:'/public/Images/smash.jpg',       url:'https://www.smashbros.com'},
+  {label:'Minecraft',        img:'/public/Images/minecraft.jpg',   url:'https://minecraft.net'},
+  {label:'Diablo IV',        img:'/public/Images/diablo.jpg',      url:'https://diablo4.blizzard.com'},
+  {label:'Hollow Knight',    img:'/public/Images/hollow.jpg',      url:'https://www.hollowknight.com'},
+  {label:'Swimming',         img:'/public/Images/swimming.jpg',    url:'https://www.swimcloud.com/swimmer/1207251/'},
+  {label:'Coding',           img:'/public/Images/coding.jpg',      url:'https://github.com/Fire-StarPlayz'},
 ];
 const ROW2=[
-  {label:'Warriors Cats',    img:'Images/warriors.jpg',    url:'https://warriorcats.com'},
-  {label:'Litten',           img:'Images/litten.png',      url:'https://www.pokemon.com/us/pokedex/litten'},
-  {label:'AI / ML',          img:'Images/ai.jpg',          url:'https://github.com/Fire-StarPlayz'},
-  {label:'Mech Engineering', img:'Images/engineering.jpg', url:''},
-  {label:'Smart Mirror',     img:'Images/mirror.jpg',      url:'https://github.com/Fire-StarPlayz'},
-  {label:'ESPORTS',          img:'Images/esports.jpg',     url:''},
-  {label:'Stargazing',       img:'Images/stargazing.jpg',  url:''},
+  {label:'Warriors Cats',    img:'/public/Images/warriors.jpg',    url:'https://warriorcats.com'},
+  {label:'Litten',           img:'/public/Images/litten.png',      url:'https://www.pokemon.com/us/pokedex/litten'},
+  {label:'AI / ML',          img:'/public/Images/ai.jpg',          url:'https://github.com/Fire-StarPlayz'},
+  {label:'Mech Engineering', img:'/public/Images/engineering.jpg', url:''},
+  {label:'Smart Mirror',     img:'/public/Images/mirror.jpg',      url:'https://github.com/Fire-StarPlayz'},
+  {label:'ESPORTS',          img:'/public/Images/esports.jpg',     url:''},
+  {label:'Stargazing',       img:'/public/Images/stargazing.jpg',  url:''},
 ];
 const PROJECTS=[
   {name:'Magic Mirror',desc:'A smart mirror with microphone, speech, and a locally running AI model.',tags:['Python','AI','Hardware'],url:'https://docs.google.com/document/d/15DfmECTw7NSU99ocWyK912bjxF-j8EWd/edit?usp=sharing&ouid=107173847830491624059&rtpof=true&sd=true'},
@@ -354,42 +349,7 @@ PROJECTS.forEach((p, i) => {
   grid.appendChild(a);
 });
 
-async function fetchNowPlaying() {
-  try {
-    const res = await fetch('/api/now-playing');
-    if (!res.ok) throw new Error();
-    const data = await res.json();
-    const dot = document.getElementById('npDot');
-    const status = document.getElementById('npStatus');
-    const card = document.getElementById('nowPlayingCard');
-    const offline = document.getElementById('npOffline');
-    if (data.isPlaying) {
-      dot.classList.add('live');
-      status.textContent = 'Now Playing';
-      document.getElementById('npArt').src = data.albumArt;
-      document.getElementById('npTrack').textContent = data.name;
-      document.getElementById('npArtist').textContent = data.artist;
-      document.getElementById('npBar').style.width = ((data.progress / data.duration) * 100) + '%';
-      document.getElementById('npLink').href = data.url;
-      card.style.display = 'grid';
-      offline.style.display = 'none';
-    } else {
-      dot.classList.remove('live');
-      status.textContent = 'Spotify';
-      card.style.display = 'none';
-      offline.style.display = 'block';
-    }
-  } catch(e) {
-    // API not reachable - show offline state, don't hide the widget
-    document.getElementById('npDot').classList.remove('live');
-    document.getElementById('npStatus').textContent = 'Spotify';
-    document.getElementById('nowPlayingCard').style.display = 'none';
-    document.getElementById('npOffline').style.display = 'block';
-    console.warn('Now playing API error:', e.message);
-  }
-}
-fetchNowPlaying();
-setInterval(fetchNowPlaying, 30000);
+
 
 // Subtle fade-in for elements that support it
 const obs = new IntersectionObserver(entries => {
