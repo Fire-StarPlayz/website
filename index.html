@@ -96,20 +96,20 @@
     .proj-desc{font-size:.92rem;color:rgba(255,248,231,.62);line-height:1.65;margin-bottom:1rem;}
     .tags{display:flex;flex-wrap:wrap;gap:.35rem;}
     .tag{font-family:'Cinzel',serif;font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .55rem;border:1px solid rgba(232,93,4,.35);color:var(--ash);}
-    .now-playing-wrap{border:1px solid rgba(232,93,4,.2);background:linear-gradient(135deg,rgba(28,10,0,.85),rgba(8,6,4,.92));padding:1.8rem 2rem;backdrop-filter:blur(10px);margin-bottom:2.5rem;}
-    .now-playing-label{font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ash);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem;}
-    .np-dot{width:8px;height:8px;border-radius:50%;background:var(--ash);flex-shrink:0;transition:background .3s;}
-    .np-dot.live{background:#1db954;box-shadow:0 0 8px rgba(29,185,84,.8);animation:pulse 1.5s ease-in-out infinite;}
-    @keyframes pulse{0%,100%{box-shadow:0 0 8px rgba(29,185,84,.8);}50%{box-shadow:0 0 18px rgba(29,185,84,1);}}
-    .now-playing-card{display:grid;grid-template-columns:72px 1fr auto;align-items:center;gap:1.2rem;}
-    .np-art{width:72px;height:72px;object-fit:cover;border:1px solid rgba(232,93,4,.4);}
-    .np-track{font-family:'Cinzel',serif;font-size:.82rem;color:var(--cream);margin-bottom:.2rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-    .np-artist{font-size:.88rem;color:var(--ash);margin-bottom:.7rem;}
-    .np-bar-wrap{height:3px;background:rgba(255,255,255,.1);border-radius:2px;overflow:hidden;}
-    .np-bar{height:100%;background:linear-gradient(to right,var(--orange),var(--amber));width:0%;transition:width 1s linear;}
-    .np-open{color:var(--amber);font-size:1.1rem;opacity:.5;transition:opacity .3s;text-decoration:none;}
-    .now-playing-card:hover .np-open{opacity:1;}
-    .np-offline{color:var(--ash);font-size:.9rem;font-style:italic;}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     .artist-embeds{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin-top:1.5rem;}
     .sp-embed{width:100%;height:160px;border:1px solid rgba(232,93,4,.2);display:block;}
     footer{padding:4rem 0 2rem;border-top:1px solid rgba(232,93,4,.15);text-align:center;position:relative;z-index:1;}
@@ -130,9 +130,9 @@
       h1.name{font-size:clamp(2rem,11vw,3.5rem);}
       .hero-top{flex-direction:column;gap:1rem;}
       .track{grid-template-columns:1.5rem 48px 1fr;}
-      .tarrow,.np-open{display:none;}
+      .tarrow{display:none;}
       .proj-grid{grid-template-columns:1fr;}
-      .now-playing-card{grid-template-columns:58px 1fr;}
+      
     }
   </style>
 </head>
@@ -246,7 +246,7 @@
   <div class="wrap">
     <p class="sec-label fi">What I'm Listening To</p>
     <h2 class="sec-head fi">Music</h2>
-            <a id="npLink" href="https://open.spotify.com" target="_blank" rel="noopener" class="np-open">&#x2197;</a>
+            
       </div>
       <p class="np-offline" id="npOffline" style="display:none">&#x1F3B5; &nbsp; Not listening right now</p>
     </div>
@@ -304,6 +304,9 @@ const ROW2=[
   {label:'Smart Mirror',     img:'/public/Images/mirror.jpg',      url:'https://github.com/Fire-StarPlayz'},
   {label:'ESPORTS',          img:'/public/Images/esports.jpg',     url:''},
   {label:'Stargazing',       img:'/public/Images/stargazing.jpg',  url:''},
+  {label:'Arcane',           img:'https://images.unsplash.com/photo-1635805737707-575885ab0820?w=400&q=80', url:'https://www.netflix.com/title/81435684'},
+  {label:'Dr. Stone',        img:'https://m.media-amazon.com/images/M/MV5BNzc4NjMwNzYtMzZjMS00NzZjLWFjNTMtNDAxYmY3NmMxODNiXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg', url:'https://www.crunchyroll.com/dr-stone'},
+  {label:'Jujutsu Kaisen',   img:'https://m.media-amazon.com/images/M/MV5BNzMxODI1NzMtZmE2ZS00OGZmLTk2YmItNmQwMTM3ZmYxZTNhXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_.jpg', url:'https://www.crunchyroll.com/jujutsu-kaisen'},
 ];
 const PROJECTS=[
   {name:'Magic Mirror',desc:'A smart mirror with microphone, speech, and a locally running AI model.',tags:['Python','AI','Hardware'],url:'https://docs.google.com/document/d/15DfmECTw7NSU99ocWyK912bjxF-j8EWd/edit?usp=sharing&ouid=107173847830491624059&rtpof=true&sd=true'},
