@@ -1,3 +1,7 @@
 {
+  "outputDirectory": ".",
   "rewrites": [
+    { "source": "/api/now-playing", "destination": "/api/now-playing.js" },
     { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}
