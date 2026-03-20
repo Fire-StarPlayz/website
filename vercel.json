@@ -1,7 +1,19 @@
 {
-  "outputDirectory": ".",
-  "rewrites": [
-    { "source": "/api/now-playing", "destination": "/api/now-playing.js" },
-    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
   ]
 }
